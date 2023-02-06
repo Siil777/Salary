@@ -9,7 +9,7 @@ from module1 import*
 
 while True:
     print(f'-----------------------------------------------------------------------------------------------')
-    print(f'0 read from file:\n1-data addition:\n2 save to file:\n3 delete a worker\n4 max salary')
+    print(f'0 read from file:\n1-data addition:\n2 save to file:\n3 delete a worker\n4 max salary,\n5 min salary,\n6 iqual salary,\n7 increase_waning,\n8 name_salary,\n9 top_salary\n10 average salary')
     v=input('>>:')
     if v=='0':
         palgad=[]
@@ -35,4 +35,17 @@ while True:
         print(inimised)
     elif v=='4':
         MAX(palgad,inimised)
+    elif v=='5':
+        MIN(palgad,inimised) 
+    elif v=='6':
+        iqual_salary(inimised,palgad)
+
+    elif v=='7':
+        increase_waning(palgad,inimised)
+    elif v=='8':
+        name_salary(palgad,inimised)
+    elif v=='9':
+        top_salary(palgad,inimised)
+    elif v=='10': 
+        average(palgad,inimised)
 
