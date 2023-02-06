@@ -56,7 +56,7 @@ def delete(nimi:str,p:list,i:list):
 
     #return mas
 def MAX(p:list,i:list):
-     """ max calculates max value in the list
+    """ max calculates max value in the list
     :param p:list
     :param i:list
     """
@@ -72,6 +72,10 @@ def MAX(p:list,i:list):
         print(f'{nimi}')
         pos=ind+1
 def MIN(p:list,i:list):
+    """ min calculates min value in the list
+    :param p:list
+    :param i:list
+    """
     p=list(map(int,p))
     min_palk=min(p)
     n=p.count(min_palk)
@@ -84,7 +88,8 @@ def MIN(p:list,i:list):
         pos=ind+1
 
 def iqual_salary(p:list,i:list):
-     """min calculates min value in the list
+    """
+     
     :param p:list
     :param i:list
     """
@@ -188,7 +193,6 @@ def average(p:list,i:list):
     else: 
         print(f'average salary is {avg}')  
     return avg
-
 
 
     #max_palk=max(p)#max salary
