@@ -41,7 +41,9 @@ while True:
         iqual_salary(inimised,palgad)
 
     elif v=='7':
-        increase_waning(palgad,inimised)
+        palgad,inimised=increase_waning(palgad,inimised,int(input('0 rise 1 waning >>:')))
+        for i in range(len(palgad)): 
+            print(f'{palgad[i]}- {inimised[i]}') 
     elif v=='8':
         name_salary(palgad,inimised)
     elif v=='9':
