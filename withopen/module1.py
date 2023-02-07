@@ -111,23 +111,34 @@ def iqual_salary(p:list,i:list):
         list2.append(inimised[list1[h]]) 
     print(f'repeat slary',b,h,'times')
 
-def increase_waning(p:list,i:list): 
+def increase_waning(p:list,inimised:list,a:int): #0 rise,1 waning
     """
     :param p:list
     :param i:list
     """
-    p=list(map(int,p))
-    i=list(map(str,i)) 
-    print('rise')
-    p.sort() 
-    i.sort()
-    print(p) 
-    print(i)
-    print('descending')
-    p.sort(reverse=True) 
-    i.sort(reverse=True) 
-    print(p) 
-    print(i)
+    N=len(p)
+    p=list(map(int,p)) 
+    if a==0: 
+        for i in range(0,N-1): 
+            for j in range(i+1,N): 
+                if p[i]<p[j]: 
+                    abi=p[i] 
+                    p[i]=p[j] 
+                    p[j]=abi
+                    abi=inimised[i] 
+                    inimised[i]=inimised[j] 
+                    inimised[j]=abi
+    else: 
+         for i in range(0,N-1): 
+            for j in range(i+1,N): 
+                if p[i]>p[j]: 
+                    abi=p[i] 
+                    p[i]=p[j] 
+                    p[j]=abi
+                    abi=inimised[i] 
+                    inimised[i]=inimised[j] 
+                    inimised[j]=abi
+    return p,inimised
  
     
     
